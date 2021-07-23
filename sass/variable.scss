@@ -1,0 +1,31 @@
+/*ーーーーーーーーーーメディアクエリの変数定義と、呼び出し設定/開始ーーーーーーーーーーーーーーー*/
+$breakPoints:(
+    'pc':'1280px',
+    'tablet':'768px',
+    'sp':'480px',
+);
+
+@mixin mq($breakpPoint) {
+    @media screen and(min-width: #{map-get($breakPoints, $breakPoint)}) {
+      @content;
+    }
+  }
+/*ーーーーーーーーーーカラーの変数定義（連想配列）/開始ーーーーーーーーーーーーーーー*/
+
+$color-bg: #faf9ea;
+// 背景色(カラー）
+
+$color-bg-w: #fff;
+// 背景色（白）
+
+
+$color-sl: #D9CEC4;
+// ブラウン
+
+$color-f: #5F5C5C;
+// フォントカラー
+
+$color-nav: #E5E5E5;
+//バーガーメニューの背景色
+
+$color-point: #95CCC0;

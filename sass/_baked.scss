@@ -1,0 +1,111 @@
+/*------------------ 【メニュー】BAKED ------------------*/
+#product {
+  width: 100%;
+  .product-width{
+    max-width: 1240px;
+    margin: 0 auto;
+    
+  }
+  header {
+    width: 100%;
+    margin-bottom: 0;
+    h1 {
+      text-align: left;
+      font-size: 3rem;
+      padding: 20px;
+    }
+    .product-main-img {
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    @media screen and (min-width:768px) {
+      width: 60%;
+      text-align: center;
+      h1{
+        text-align: center;
+      }
+      .product-main-img{
+        width: 80%;
+        margin: 0 auto;
+      }// .ciffon-main-img
+    }
+  } //header
+
+  main {
+    .bredcrumb{
+      margin-top: 20px;
+    ol{
+        display: flex;
+        padding-left: 17px;
+        
+        .bredcrumb-line{
+          position: relative;
+        }
+      }
+      .bredcrumb-line::after{
+        content: '';
+	      display: block;
+	      position: absolute;
+	      left: 75%; /* 位置調整 */
+	      transform: translate(-50%); /* 位置調整 */
+	      bottom: -4px; /* 下線の上下位置調整 */
+	      width: 20px; /* 下線の幅 */
+	      height: 1px; /* 下線の太さ */
+	      background-color:$color-point; /* 下線の色 */
+      }
+      
+      & li::before{
+        content: "＞";
+        padding: 0 10px;
+      }
+      & li:first-child::before {
+        content: "";
+      }
+      @media screen and (min-width:768px) {
+        ol{
+          padding-left: 19%;
+        }
+      }
+    }
+    .pd-nav {
+      .pd-nav-list {
+        display: flex;
+        width: 100%;
+        margin: 20px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        .pd-nav-list-txt {
+          width: 40%;
+          margin: 15px;
+          padding: 10px;
+          border: 1px solid $color-sl;
+          font-size: 1rem;
+          letter-spacing: 1px;
+          & a {
+            font-size: 1rem;
+          }
+          & span {
+            display: block;
+            padding-top: 5px;
+            font-size: 0.7rem;
+          }
+        }
+        .celect {
+          background-color: $color-sl;
+          color: $color-f;
+          letter-spacing: 1px;
+        }
+        @media screen and (min-width: 768px) {
+          width: 70%;
+          margin: 0 auto;
+          margin-bottom: 50px;
+          .pd-nav-list-txt:hover {
+            transition: 0.5s;
+            background-color: $color-sl;
+          }
+        }
+      } // .pd-nav-list
+    } // .pd-nav
+  }}

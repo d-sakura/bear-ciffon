@@ -1,0 +1,142 @@
+/*------------------ 【メニュー】CIFFON ------------------*/
+#product {
+  width: 100%;
+  .gallery {
+    columns: 2;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 15px;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.8rem;
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      columns: 4;
+      li {
+        font-size: 1rem;
+        li:hover {
+          transition: 0.5s;
+          opacity: 0.8;
+        }
+      }
+    }
+  } //.gallery
+} //#product
+
+// --------------------------- タブの設定 -----------------------------
+
+.tab-wrapper {
+  .tab {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 3rem;
+    border-bottom: 2px solid $color-sl;
+  
+    .tab-item {
+      width: 30%;
+      text-align: center;
+      &:first-child {
+        margin-right: 30px;
+      }
+
+      border: 1px solid $color-sl;
+      border-bottom: none;
+      &.active {
+        background-color: $color-sl;
+      }
+      a {
+        display: block;
+        padding: 3px;
+          margin: 10px;
+      }
+    }
+  } // .tab
+} // .tab-wrapper 
+.area {
+  display: none;
+  opacity: 0;
+  background: #fff;
+  padding: 10px 20px;
+  text-align: left;
+  .area-title {
+    font-size: 20px;
+    margin: 10px 0;
+    padding-left: 5px;
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      sans-serif;
+  }
+  .area-price {
+    .area-price-txt {
+      padding: 5px;
+      line-height: 2;
+      font-size: 0.8rem;
+    }
+    .area-price-txt-left {
+      font-size: 0.8rem;
+      margin: 15px 0 30px 0;
+      padding-left: 76%;
+    }
+  }
+  p {
+    font-size: 0.8rem;
+    padding: 5px 5px 15px 5px;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+} // .area
+
+@media screen and (min-width: 768px) {
+  .area {
+    margin-top: 5%;
+    letter-spacing: 2px;
+    .area-title {
+      font-size: 1.5rem;
+      width: 60%;
+      margin: 0 auto;
+      padding-bottom: 10px;
+    }
+    .area-price {
+      width: 60%;
+      margin: 0 auto;
+      .area-price-txt,
+      .area-price-txt-left {
+        font-size: 0.9rem;
+      }
+    }
+    .area-txt {
+      width: 60%;
+      // text-align: center;
+      margin: 0 auto;
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.area.is-active {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime {
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox .lb-image {
+  border: none;
+}
