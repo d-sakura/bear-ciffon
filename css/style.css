@@ -405,7 +405,7 @@ nav {
     justify-content: center; }
     nav .shop-link.active {
       display: flex; }
-    nav .shop-link .shop-link a:hover {
+    nav .shop-link a:hover {
       background-color: #fff;
       transition: .8s; }
     nav .shop-link a {
@@ -515,7 +515,8 @@ nav {
         justify-content: center; }
         nav .mb-bg-menu .mb-nav-content ul.nav-menu li {
           width: 25%;
-          margin: 10px; }
+          margin: 10px;
+          padding: 10px 0; }
           nav .mb-bg-menu .mb-nav-content ul.nav-menu li a {
             font-size: 1rem;
             letter-spacing: 1px; }
@@ -548,6 +549,8 @@ nav {
         nav .mb-bg-menu .mb-nav-content .nav-menu {
           width: 70%;
           margin: 0 auto; }
+          nav .mb-bg-menu .mb-nav-content .nav-menu li {
+            border: 1px solid #E5E5E5; }
           nav .mb-bg-menu .mb-nav-content .nav-menu li:hover {
             transition: 0.5s;
             background: #fff;
@@ -740,7 +743,8 @@ main {
           .menu .menu-wrap a:hover .menu-blk {
             border: 2px solid #95CCC0; }
         .menu .menu-wrap .menu-blk {
-          max-width: 650px; }
+          max-width: 650px;
+          border: 2px solid #faf9ea; }
           .menu .menu-wrap .menu-blk .menu-txt {
             padding-right: 0; }
             .menu .menu-wrap .menu-blk .menu-txt h3 {
@@ -859,7 +863,7 @@ footer {
         footer .access-btn ul li {
           width: 100%;
           margin: 15px 10px;
-          border-right: 2px solid #fff; }
+          border: 1px solid #fff; }
           footer .access-btn ul li img {
             width: 10%; }
         footer .access-btn ul li:hover {

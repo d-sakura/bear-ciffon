@@ -265,7 +265,7 @@ nav {
     &.active{
       display: flex;
     }
-    .shop-link a:hover{
+    a:hover{
       background-color: #fff;
       transition: .8s;
     }
@@ -407,6 +407,7 @@ nav {
           li {
             width: 25%;
             margin: 10px;
+            padding: 10px 0;
 
             a {
               font-size: 1rem;
@@ -458,6 +459,9 @@ nav {
         .nav-menu {
           width: 70%;
           margin: 0 auto;
+          li {
+            border: 1px solid $color-nav;
+          }
           li:hover {
             transition: 0.5s;
             background: #fff;
@@ -699,6 +703,7 @@ main {
       }
       .menu-blk {
         max-width: 650px;
+        border: 2px solid $color-bg;
         .menu-txt {
           padding-right: 0;
           h3 {
@@ -853,7 +858,7 @@ footer {
         li {
           width: 100%;
           margin: 15px 10px;
-          border-right: 2px solid #fff;
+          border: 1px solid #fff;
           img {
             width: 10%;
           }
