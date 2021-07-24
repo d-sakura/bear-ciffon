@@ -5,6 +5,8 @@
 @import "pickup";
 @import "baked";
 @import "cake";
+@import "bearbear";
+
 
 
 * {
@@ -435,7 +437,7 @@ nav {
     @media screen and (min-width: 768px) {
       width: 70%;
       img {
-        max-width: 150px;
+        max-width: 85px;
       }
       .mb-nav-menu {
         width: 80%;
@@ -494,6 +496,65 @@ nav {
 .circle-bg.circleactive {
   transform: scale(50);
 }
+
+/*---------------- 波紋 ----------------*/
+
+.btnripple3{
+  /*波紋の基点とするためrelativeを指定*/
+position: relative;
+  /*リンクの形状*/
+display:inline-block;
+// margin:0 10px 20px 10px;
+  text-decoration: none;
+  color: $color-f;
+  outline: none;
+}
+
+/*波形の設定*/
+.btnripple3:hover::before {
+  content: '';
+  /*絶対配置で波形の位置を決める*/
+  position: absolute;
+  left:30%;
+  top:0;
+  /*波形の形状*/
+  border: 1px solid $color-point;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /*はじめは不透明*/
+opacity:1;
+  /*アニメーションの設定*/
+  animation:1s circleanime2 forwards;
+}
+
+/*波形が広がるアニメーション*/
+@keyframes circleanime2{
+0%{
+  transform: scale(0);
+}
+100%{
+  transform:scale(2);
+  opacity: 0;
+}
+}
+
+/*矢印の設定*/
+.btnripple3::after {
+  content: '';
+  /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+  top: 35%;
+  right: -20px;
+  /*矢印の形状*/
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid $color-f;
+  border-right: 1px solid $color-f;
+  transform: rotate(45deg);
+}
+/*---------------- 波紋 ----------------*/
+
 /*---------------- CONCEPT ----------------*/
 
 main {
@@ -507,9 +568,10 @@ main {
     background-position: right bottom;
     width: 100%;
     a {
-      font-size: 1rem;
-      line-height: 6;
-      padding-right: 20px;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      // line-height: 6;
+      // padding-right: 20px;
       letter-spacing: 1px;
     }
   } // .concept
@@ -557,21 +619,17 @@ main {
 } // main mb
 
 @media screen and (min-width: 768px) {
-  main .concept a{
-      font-size: 1.2rem;
+  .inf .concept a{
+      font-size: 2rem;
       margin-bottom: 30px;
-      line-height: 4;
+      // line-height: 4;
     }
-    main .concept a:hover {
-    text-underline-offset: 5px;
-    text-decoration-line: underline;
-    text-decoration-color: $color-point;
-  }
 }
 /*------------------ INFO -------------------*/
 .info {
   width: 100%;
   padding-bottom: 40px;
+  margin-top: 30px;
   a {
     font-size: 1rem;
   }
@@ -633,15 +691,13 @@ main {
     }
   } // pc
 } // info mb
-.link-text:hover{
-  border-bottom: 1px solid $color-point;
-}
+
 /*------------------ MENU -------------------*/
 
 .menu {
   background-color: $color-bg;
   width: 100%;
-  padding: 55px 0;
+  padding: 35px 0;
   .menu-blk {
     background-color: #fff;
     display: flex;

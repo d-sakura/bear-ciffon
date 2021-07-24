@@ -1,0 +1,80 @@
+/*------------------ 【Bear Bear】当店について ------------------*/
+#bearbear{
+width: 100%;
+.bear-about-width{
+  max-width: 1240px;
+  margin: 0 auto;
+}
+  .bear-about h1{
+    text-align: left;
+    padding: 20px;
+    font-size: 3rem;
+  }
+  .bear-about img{
+    width: 100%;
+  }
+  main{
+    .bredcrumb{
+      margin: 20px 0;
+    ol{
+        display: flex;
+        padding-left: 17px;
+        
+        .bredcrumb-line{
+          position: relative;
+        }
+      }//ol
+      .bredcrumb-line::after{
+        content: '';
+	      display: block;
+	      position: absolute;
+	      left: 68%; /* 位置調整 */
+	      transform: translate(-50%); /* 位置調整 */
+	      bottom: -4px; /* 下線の上下位置調整 */
+	      width: 20px; /* 下線の幅 */
+	      height: 1px; /* 下線の太さ */
+	      background-color:$color-point; /* 下線の色 */
+      }
+      
+      & li::before{
+        content: "＞";
+        padding: 0 10px;
+      }
+      & li:first-child::before {
+        content: "";
+      }
+      @media screen and (min-width:768px) {
+        ol{
+          padding-left: 0;
+        }
+      }//sp
+    }//.bredcrumb
+    h3{
+      margin: 40px 0 20px 0;
+      font-size: 1.2rem;
+    }
+    p{
+      padding: 10px 30px;
+      font-size: 0.8rem;
+      line-height: 2.5;
+      letter-spacing: 2.5px;
+      text-align: left;
+      margin-bottom: 40px;
+      span{
+        display: block;
+        text-align: right;
+      }
+    }
+  }//main
+    @media screen and (min-width:768px) {
+      width: 60%;
+      margin: 0 auto;
+      .bear-about h1{
+        text-align: center;
+      }
+      .bear-about img{
+        width: 100%;
+        margin: 0 auto;
+      }
+  }
+}//#bearbear

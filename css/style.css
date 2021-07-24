@@ -197,6 +197,72 @@
           background-color: #D9CEC4; } }
 
 /*------------------ 【メニュー】CAKE ------------------*/
+/*------------------ 【Bear Bear】当店について ------------------*/
+#bearbear {
+  width: 100%; }
+  #bearbear .bear-about-width {
+    max-width: 1240px;
+    margin: 0 auto; }
+  #bearbear .bear-about h1 {
+    text-align: left;
+    padding: 20px;
+    font-size: 3rem; }
+  #bearbear .bear-about img {
+    width: 100%; }
+  #bearbear main .bredcrumb {
+    margin: 20px 0; }
+    #bearbear main .bredcrumb ol {
+      display: flex;
+      padding-left: 17px; }
+      #bearbear main .bredcrumb ol .bredcrumb-line {
+        position: relative; }
+    #bearbear main .bredcrumb .bredcrumb-line::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 68%;
+      /* 位置調整 */
+      transform: translate(-50%);
+      /* 位置調整 */
+      bottom: -4px;
+      /* 下線の上下位置調整 */
+      width: 20px;
+      /* 下線の幅 */
+      height: 1px;
+      /* 下線の太さ */
+      background-color: #95CCC0;
+      /* 下線の色 */ }
+    #bearbear main .bredcrumb li::before {
+      content: "＞";
+      padding: 0 10px; }
+    #bearbear main .bredcrumb li:first-child::before {
+      content: ""; }
+    @media screen and (min-width: 768px) {
+      #bearbear main .bredcrumb ol {
+        padding-left: 0; } }
+  #bearbear main h3 {
+    margin: 40px 0 20px 0;
+    font-size: 1.2rem; }
+  #bearbear main p {
+    padding: 10px 30px;
+    font-size: 0.8rem;
+    line-height: 2.5;
+    letter-spacing: 2.5px;
+    text-align: left;
+    margin-bottom: 40px; }
+    #bearbear main p span {
+      display: block;
+      text-align: right; }
+  @media screen and (min-width: 768px) {
+    #bearbear {
+      width: 60%;
+      margin: 0 auto; }
+      #bearbear .bear-about h1 {
+        text-align: center; }
+      #bearbear .bear-about img {
+        width: 100%;
+        margin: 0 auto; } }
+
 * {
   box-sizing: border-box; }
 
@@ -533,7 +599,7 @@ nav {
       nav .mb-bg-menu {
         width: 70%; }
         nav .mb-bg-menu img {
-          max-width: 150px; }
+          max-width: 85px; }
         nav .mb-bg-menu .mb-nav-menu {
           width: 80%; }
           nav .mb-bg-menu .mb-nav-menu p {
@@ -574,6 +640,55 @@ nav {
 .circle-bg.circleactive {
   transform: scale(50); }
 
+/*---------------- 波紋 ----------------*/
+.btnripple3 {
+  /*波紋の基点とするためrelativeを指定*/
+  position: relative;
+  /*リンクの形状*/
+  display: inline-block;
+  text-decoration: none;
+  color: #5F5C5C;
+  outline: none; }
+
+/*波形の設定*/
+.btnripple3:hover::before {
+  content: '';
+  /*絶対配置で波形の位置を決める*/
+  position: absolute;
+  left: 30%;
+  top: 0;
+  /*波形の形状*/
+  border: 1px solid #95CCC0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /*はじめは不透明*/
+  opacity: 1;
+  /*アニメーションの設定*/
+  animation: 1s circleanime2 forwards; }
+
+/*波形が広がるアニメーション*/
+@keyframes circleanime2 {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(2);
+    opacity: 0; } }
+/*矢印の設定*/
+.btnripple3::after {
+  content: '';
+  /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+  top: 35%;
+  right: -20px;
+  /*矢印の形状*/
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #5F5C5C;
+  border-right: 1px solid #5F5C5C;
+  transform: rotate(45deg); }
+
+/*---------------- 波紋 ----------------*/
 /*---------------- CONCEPT ----------------*/
 main {
   text-align: center; }
@@ -586,9 +701,8 @@ main {
     background-position: right bottom;
     width: 100%; }
     main .concept a {
-      font-size: 1rem;
-      line-height: 6;
-      padding-right: 20px;
+      font-size: 1.2rem;
+      margin-top: 30px;
       letter-spacing: 1px; }
   main .concept-text {
     max-width: 868px;
@@ -625,19 +739,14 @@ main {
           padding-top: 50px; } }
 
 @media screen and (min-width: 768px) {
-  main .concept a {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    line-height: 4; }
-
-  main .concept a:hover {
-    text-underline-offset: 5px;
-    text-decoration-line: underline;
-    text-decoration-color: #95CCC0; } }
+  .inf .concept a {
+    font-size: 2rem;
+    margin-bottom: 30px; } }
 /*------------------ INFO -------------------*/
 .info {
   width: 100%;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  margin-top: 30px; }
   .info a {
     font-size: 1rem; }
   .info ul {
@@ -686,14 +795,11 @@ main {
       .info a:hover {
         color: #806440; } }
 
-.link-text:hover {
-  border-bottom: 1px solid #95CCC0; }
-
 /*------------------ MENU -------------------*/
 .menu {
   background-color: #faf9ea;
   width: 100%;
-  padding: 55px 0; }
+  padding: 35px 0; }
   .menu .menu-blk {
     background-color: #fff;
     display: flex;
