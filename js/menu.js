@@ -14,10 +14,13 @@ $("#g-nav a").click(function(){//ナビのリンクがクリックされたら
 });
 
 lightbox.option({
-    'albumLabel':""
-    
+    'albumLabel':""    
 });
-$('a[rel*=lightbox]').lightbox({
-    overlayBgColor: '#fff',
-    overlayOpacoty: 0.6
-});
+
+
+if ($('a[rel*=lightbox]').length > 0) {
+    $('a[rel*=lightbox]').lightbox({
+        overlayBgColor: '#fff',
+        overlayOpacoty: 0.6
+    });
+}
