@@ -1,1 +1,69 @@
 /*------------------ 【メニュー】CAKE ------------------*/
+
+.cake-b{
+  border-bottom: 1px solid $color-point;
+  margin: 0 0 40px 0;
+}
+
+.cake-b h2,.cake-s h2{
+  font-size: 18px;
+  margin: 15px 0;
+  padding: 10px 5px;
+  border-left: 2px solid $color-point;
+}
+.cake-b p{
+  line-height: 1.3;
+  font-size: 13px;
+  padding: 0;
+}
+
+.cake-b ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.cake-b ul li{
+  font-size: 9px;
+  text-align: right;
+  padding: 5px;
+}
+.reserve{
+  text-align: center;
+  margin: 40px 0;
+}
+.reserve a{
+  border: $color-sl 1px solid;
+  padding: 15px 30px;
+  font-size: 15px;
+}
+.reserve a:hover {
+  transition: 0.5s;
+  background-color: $color-sl;
+}
+.cake-b img{
+  width: 100%;
+  margin: 5px auto;
+  text-align: center;
+}
+
+@media screen and (min-width:768px) {
+  #birthday{
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  #birthday.is-active {
+    display: flex;
+  }
+  .cake-b{
+    width: 40%;
+    border-bottom: none;
+  }
+  #season{
+    margin-top: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+}

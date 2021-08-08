@@ -109,3 +109,23 @@
       } // .pd-nav-list
     } // .pd-nav
   }}
+
+  .baked{
+    padding: 0 20px;
+  }
+  .baked-txt{
+    padding: 10px 20px;
+    text-align: left;
+  }
+  .baked-txt h2{
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 10px 5px;
+    border-left: 2px solid $color-point;
+  }
+  .baked-txt p{
+    line-height: 1.3;
+    font-size: 13px;
+    padding: 0 5px;
+    letter-spacing: 1px;
+  }

@@ -1,1 +1,38 @@
 /*------------------ 【メニュー】PICK UP ------------------*/
+.pick-up{
+  text-align: left;
+  border-bottom: 1px solid $color-point;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 90%;
+}
+
+.pick-up h2{
+  font-size: 18px;
+    margin: 15px 0;
+    padding: 10px 5px;
+    border-left: 2px solid $color-point;
+}
+
+.pick-up p{
+  line-height: 1.3;
+  font-size: 13px;
+  padding: 0 10px 20px 10px;
+  letter-spacing: 1px;
+}
+
+.pick-up img{
+  width: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .pick-up-box{
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+  }
+  .pick-up{
+    width: 40%;
+    border-bottom: none;
+  }
+}
