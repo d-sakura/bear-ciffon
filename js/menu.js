@@ -8,7 +8,7 @@ $(function(){
     
     });
     
-    $("#g-nav a").click(function(){//ナビのリンクがクリックされたら
+    $("#g-nav button").click(function(){//ナビのリンクがクリックされたら
         $(".openbtn").removeClass('active');//ボタンのactiveクラスを除去し
         $("#g-nav-list").removeClass('panelactive');//ナビのpanelactiveクラスも除去
         $(".circle-bg").removeClass('circleactive');//丸背景のcircleactiveクラスを除去
@@ -27,7 +27,6 @@ $(function(){
     }
 
     $('a[href^="#"]').click(function(){
-        console.log(111)
       let speed = 500;
       let href= $(this).attr("href");
       let target = $(href == "#" || href == "" ? 'html' : href);

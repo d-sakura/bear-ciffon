@@ -411,6 +411,10 @@ span {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   color: #5F5C5C; }
 
+button {
+  border: none;
+  background: none; }
+
 .message {
   display: block;
   font-size: 20px;
