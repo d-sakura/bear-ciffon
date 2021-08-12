@@ -86,7 +86,7 @@ button {
 }
 .openbtn {
   position: fixed;
-  right: 20px;
+  right: 5px;
   top: 15px;
   z-index: 999;
   cursor: pointer;
@@ -315,7 +315,7 @@ nav {
     transition: all 0.6s;
     .close {
       position: fixed;
-      right: 0;
+      right: -13px;
       z-index: 999;
       cursor: pointer;
       text-align: center;
@@ -324,7 +324,7 @@ nav {
         margin: 0;
       }
       .closebtn {
-        right: 10px;
+        right: 5px;
         top: 10px;
         z-index: 999;
         width: 50px;
