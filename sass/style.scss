@@ -84,9 +84,11 @@ button {
     }
   }
 }
+
+/*----------------- openbtn --------------------*/
 .openbtn {
   position: fixed;
-  right: 5px;
+  right: 10px;
   top: 15px;
   z-index: 999;
   cursor: pointer;
@@ -302,9 +304,8 @@ nav {
       display: none;
     } // pc 
   }
-
-  //----------------------　バーガー　-------------------------
-
+/*------------------ バーガー ------------------*/
+ 
   #g-nav-list {
     position: fixed;
     z-index: 1;
@@ -315,7 +316,7 @@ nav {
     transition: all 0.6s;
     .close {
       position: fixed;
-      right: -13px;
+      right: -10px;
       z-index: 999;
       cursor: pointer;
       text-align: center;
@@ -324,7 +325,7 @@ nav {
         margin: 0;
       }
       .closebtn {
-        right: 5px;
+        right: 10px;
         top: 10px;
         z-index: 999;
         width: 50px;

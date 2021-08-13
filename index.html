@@ -25,15 +25,14 @@
     </div>
     <div id="splash_text"></div>
   </div>
-  <!---------------------- / loading ---------------------->
   
   <span class="message">※架空のWebサイトです。</span>
-  <!---------------------- openbtn ------------------------>
-  <div class="openbtn ">
-    <button href="#"><img src="img/nav-btn.png" alt="">
-    </button><span>touch</span>
-  </div><!-- openbtn -->
-  <!---------------------- / openbtn ---------------------->
+  
+<!---------------------- open btn ------------------------>
+<div class="openbtn ">
+  <button href="#"><img src="img/nav-btn.png" alt="">
+  </button><span>touch</span>
+</div><!-- openbtn -->
 
   <!---------------------- fv ----------------------------->
   <header class="top">
@@ -67,8 +66,6 @@
         </ul>
       </div>
     </div>
-    <!-------------------- / pcのみ --------------------------->
-    <!---------------------- / fv ---------------------------->
   </header>
 
   <nav id="g-nav">
@@ -126,13 +123,10 @@
         </ul>
       </div>
     </div><!-- g-nav-list mb-bg-menu -->
-    <!---------------------- / バーガー ------------------------>
-
   </nav>
 
   <!------------------------ バーガー 丸背景用 ---------------------------->
   <div class="circle-bg"></div>
-  <!------------------------ / バーガー 丸背景用 ---------------------------->
 
   <main>
     <!------------------------- CONCEPT --------------------------->
@@ -148,7 +142,6 @@
       <a href="bearbear/index.html" class="link-text btnripple3">Bear Bear</a>
     </div>
     <!--concept-->
-    <!------------------------- /CONCEPT --------------------------->
 
     <!--------------------------- INFO ---------------------------->
     <div class="info">
@@ -174,9 +167,7 @@
         </ul><!-- /info-box -->
       </div>
       <a class="link-text btnripple3" href="#">もっと見る</a>
-    </div>
-    <!--INFO-->
-    <!--------------------------- / INFO ---------------------------->
+    </div><!--INFO-->
 
     <!-------------------------- MENU ----------------------------->
     <div id="menu" class="menu">
@@ -238,7 +229,6 @@
         </div><!-- menu-wrap -->
       </div><!-- /menu-width -->
     </div><!-- /.menu -->
-    <!-------------------------- / MENU ----------------------------->
 
     <!--------------------- WOOD DECK CAFE ------------------------>
     <div class="deck-cafe">
@@ -247,7 +237,6 @@
       <img src="img/wd-cafe.jpg" alt="">
       <p>BearBearのウッドデッキでは、カフェメニューをお楽しみいただけます。​愛犬をお連れのお客様にも気軽にご利用いただけます。​大切なご家族やご友人と一緒に楽しい時間をお過ごしください。</p>
     </div>
-    <!--------------------- / WOOD DECK CAFE ------------------------>
   </main>
 
   <footer>
@@ -276,7 +265,6 @@
         <li><a href=""><img src="img/mail-icon.png" alt="">お問い合わせ</a></li>
       </ul>
     </div><!-- /.access-btn -->
-    <!----------------------- / ACCESS ------------------------------>
     <small>©︎ Bear Bear All Right Reserved.</small>
   </footer>
 
@@ -291,20 +279,15 @@
       strokeWidth: 0,//進捗ゲージの太さ
       duration: 1500,//時間指定(1000＝1秒)
       trailWidth: 0,//線の太さ
-      // step: function (state, bar) {
-      //   // bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
-      // }
+
     });
 
     //アニメーションスタート
-    bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
+    bar.animate(1.0, function () {//バーを描画する割合を指定1.0なら100%まで描画
       $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
     });
 
     $('.menu-txt').matchHeight()
-
-
-
   </script>
 </body>
 
